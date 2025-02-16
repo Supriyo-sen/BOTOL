@@ -12,6 +12,7 @@ export default {
         foreground: "var(--foreground)",
         lightBlue: "#00D1FF",
         darkBlue: "#1A83FF",
+        featureColor: "#20292C",
       },
     },
   },

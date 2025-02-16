@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import react from "react";
 import Image from "next/image";
+import { familjenGrotesk } from "@/app/Utils/Fonts";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = react.useState(false);
   return (
-    <nav className="container mx-auto px-8 py-5 flex items-center justify-between">
+    <nav className="container mx-auto px-20 py-6 flex items-center justify-between">
       {/* Logo */}
       <Link href="/">
         <Image
@@ -20,42 +21,35 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center gap-6">
-        <Link
-          href="/shop"
-          className="text-gray-800 hover:text-gray-600 transition-colors"
-        >
+      <div
+        className={`hidden ${familjenGrotesk.className} font-normal text-lg md:flex items-center gap-10`}
+      >
+        <Link href="/shop" className=" hover:text-gray-600 transition-colors">
           Shop
         </Link>
         <Link
           href="/contact"
-          className="text-gray-800 hover:text-gray-600 transition-colors"
+          className=" hover:text-gray-600 transition-colors"
         >
           Contact us
         </Link>
-        <Link
-          href="/about"
-          className="text-gray-800 hover:text-gray-600 transition-colors"
-        >
+        <Link href="/about" className=" hover:text-gray-600 transition-colors">
           About
         </Link>
         <Link
           href="/journal"
-          className="text-gray-800 hover:text-gray-600 transition-colors"
+          className=" hover:text-gray-600 transition-colors"
         >
           Journal
         </Link>
-        <Link
-          href="/custom"
-          className="text-gray-800 hover:text-gray-600 transition-colors"
-        >
+        <Link href="/custom" className=" hover:text-gray-600 transition-colors">
           Custom
         </Link>
         <Link
           href="/inquiry"
           className="px-6 py-2 rounded-full text-white 
              bg-gradient-to-r from-lightBlue to-darkBlue 
-             transition-all"
+             transition-all ml-6"
         >
           Inquiry Now
         </Link>
@@ -72,7 +66,9 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-6 z-50 md:hidden transition-all ">
+        <div
+          className={`hidden ${familjenGrotesk.className}absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-6 z-50 md:hidden transition-all`}
+        >
           <Link
             href="/shop"
             className="text-gray-800 hover:text-gray-600"
