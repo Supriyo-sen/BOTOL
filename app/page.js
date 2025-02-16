@@ -9,6 +9,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import HydrationEssentials from "./Components/Home/HydrationEssential";
+import RoadMap from "./Components/Home/RoadMap";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const page = () => {
@@ -255,6 +256,9 @@ const page = () => {
       {/* Special bottle  Section */}
       <main className="min-h-screen flex flex-col items-center justify-center w-full bg-white">
         <HydrationEssentials />
+      </main>
+      <main className="w-full bg-white">
+        <RoadMap />
       </main>
     </>
   );
