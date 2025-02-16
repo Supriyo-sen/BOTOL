@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
+import HydrationEssentials from "./Components/Home/HydrationEssential";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const page = () => {
@@ -19,6 +19,7 @@ const page = () => {
   const leftProductRef = React.useRef(null);
   const rightProductRef = React.useRef(null);
   const [animationCompleted, setAnimationCompleted] = React.useState(false);
+
   React.useEffect(() => {
     window.scrollTo(-10, 0);
   }, []);
@@ -165,7 +166,7 @@ const page = () => {
 
           {/* Down Image */}
           <motion.div
-            initial={{ y: 50 }}
+            initial={{ y: 55 }}
             animate={{ y: 330 }}
             transition={{ duration: 3, ease: "easeInOut", delay: 2 }}
             className="absolute z-10 -bottom-[210px]"
@@ -250,6 +251,10 @@ const page = () => {
             ))}
           </div>
         </section>
+      </main>
+      {/* Special bottle  Section */}
+      <main className="min-h-screen flex flex-col items-center justify-center w-full bg-white">
+        <HydrationEssentials />
       </main>
     </>
   );
